@@ -16,7 +16,7 @@ if (maryte > jonukas) {
     console.log("Atiduokim obuolius Editai")
 }
 
-switch (maryte) {
+switch (3) {
     case 5:
         console.log('Turi tiek obuoliu kiek ant rankos pirstų')
         break
@@ -24,5 +24,12 @@ switch (maryte) {
         console.log('Tavo tašej obuolių - kiek savaitėje dienų')
         break;
     default:
-        console.log('Nebsurimuoju pagal tai kiek turi obuoliu')
+        console.log('Nebesirimuoja pagal tai kiek turi obuolių')
+}
+
+console.log(`Trecias vaisius yra ${vaisiai[2]}, o ketviras: ${vaisiai[3]}`)
+
+
+for (let i = 0; i < vaisiai.length; i++) {
+    console.log(vaisiai[i])
 }
