@@ -59,7 +59,7 @@ function countPrice2() {
 
 //4 ----------------------------------------------------------------------
 const heroeHolder = document.createElement('div')
-body.appendChild(heroeHolder)
+
 
 const heroesArr = [{ name: 'pelene', properties: 'dazniausiai be vieno bato' },
 { name: 'Miegancioji gražuolė', properties: 'pirmadieniais į mokyklą neatvyksta, nes pramiega' },
@@ -68,11 +68,20 @@ const heroesArr = [{ name: 'pelene', properties: 'dazniausiai be vieno bato' },
 { name: 'Pinokis', properties: 'pasakų pirikūpas' },
 { name: 'Karlsonas', properties: 'pastoviai išskridęs' }]
 
-let html = '<ul>';
 
-heroesArr.forEach((itm, i) => {
-    html += `<li style="background-color:${i % 2 == 0 ? 'blue' : 'none'}; color: ${i % 2 == 0 ? 'white' : 'black'}">${itm.name}  -  ${itm.properties}</li>`
-})
-html += '</ul>'
 
-heroeHolder.innerHTML = html;
+const button4 = document.createElement('button')
+button4.textContent = 'Herojai'
+body.appendChild(button4)
+button4.addEventListener('click', showHeroes)
+body.appendChild(heroeHolder)
+
+function showHeroes() {
+    let html = '<ul>';
+
+    heroesArr.forEach((itm, i) => {
+        html += `<li style="background-color:${i % 2 == 0 ? 'blue' : 'none'}; color: ${i % 2 == 0 ? 'white' : 'black'}">${itm.name}  -  ${itm.properties}</li>`
+    })
+    html += '</ul>'
+    heroeHolder.innerHTML = html;
+}
